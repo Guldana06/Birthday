@@ -8,7 +8,7 @@ body {
   background-color: #ffdae9;
   background-image: radial-gradient(#ffb6c1 2px, transparent 2px);
   background-size: 20px 20px;
-  font-family: 'Press Start 2P', monospace;
+  font-family: 'VT323', monospace;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,11 +22,11 @@ body {
 
 /* Пиксельный заголовок */
 h1 {
-  font-size: 2rem;
+  font-size: 3rem;
   color: #ff4081;
-  text-shadow: 4px 4px 0px #ffffff, 6px 6px 0px #c2185b;
-  margin-bottom: 30px;
-  line-height: 1.4;
+  text-shadow: 3px 3px 0px #ffffff, 5px 5px 0px #c2185b;
+  margin-bottom: 25px;
+  line-height: 1.2;
   word-break: break-word;
 }
 
@@ -34,13 +34,13 @@ h1 {
 .btn {
   background-color: #ff69b4;
   color: #ffffff;
-  font-family: 'Press Start 2P', monospace;
-  font-size: 1rem;
-  padding: 18px 28px;
+  font-family: 'VT323', monospace;
+  font-size: 1.6rem;
+  padding: 12px 28px;
   border: 4px solid #ffffff;
   outline: 4px solid #c2185b;
   cursor: pointer;
-  box-shadow: 6px 6px 0px #880e4f;
+  box-shadow: 5px 5px 0px #880e4f;
   transition: all 0.1s ease;
   margin-bottom: 25px;
 }
@@ -48,21 +48,21 @@ h1 {
 .btn:hover {
   background-color: #ff1493;
   transform: translate(-2px, -2px);
-  box-shadow: 8px 8px 0px #880e4f;
+  box-shadow: 7px 7px 0px #880e4f;
 }
 
 .btn:active {
-  transform: translate(4px, 4px);
+  transform: translate(3px, 3px);
   box-shadow: 2px 2px 0px #880e4f;
 }
 
-/* Пиксельная карточка с поздравлением */
+/* Карточка */
 .card {
   background: #fff0f5;
   border: 4px solid #ff69b4;
   box-shadow: 8px 8px 0px #d63384;
   padding: 25px;
-  max-width: 450px;
+  max-width: 520px;
   width: 100%;
   display: none;
   animation: popIn 0.3s ease-out forwards;
@@ -70,23 +70,58 @@ h1 {
 }
 
 .card h2 {
-  font-size: 1.1rem;
+  font-size: 2.2rem;
   color: #d63384;
   margin-bottom: 15px;
 }
 
 .card p {
-  font-size: 0.75rem;
-  line-height: 1.8;
+  font-size: 1.4rem;
+  line-height: 1.4;
   color: #4a4a4a;
 }
 
+/* Галерея фотографий */
+.photo-gallery {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+
+/* Отдельная пиксельная рамка для каждой фотографии */
+.photo-frame {
+  background-color: #ffffff;
+  border: 4px solid #ff1493;
+  padding: 6px;
+  box-shadow: 4px 4px 0px #d63384;
+  flex: 1 1 200px;
+  max-width: 220px;
+  height: 280px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Отображение фотографии полностью */
+.profile-photo {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+/* Анимация появления карточки */
 @keyframes popIn {
   0% { transform: scale(0.5); opacity: 0; }
   100% { transform: scale(1); opacity: 1; }
 }
 
-/* Анимация парящих эмодзи, шариков и сердечек */
+/* Парящие эмодзи и сердечки */
 .floating-item {
   position: fixed;
   bottom: -50px;
