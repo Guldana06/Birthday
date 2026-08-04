@@ -1,0 +1,109 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ffdae9;
+  background-image: radial-gradient(#ffb6c1 2px, transparent 2px);
+  background-size: 20px 20px;
+  font-family: 'Press Start 2P', monospace;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center;
+  overflow-x: hidden;
+  padding: 20px;
+  color: #d63384;
+}
+
+/* Пиксельный заголовок */
+h1 {
+  font-size: 2rem;
+  color: #ff4081;
+  text-shadow: 4px 4px 0px #ffffff, 6px 6px 0px #c2185b;
+  margin-bottom: 30px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+/* Пиксельная кнопка */
+.btn {
+  background-color: #ff69b4;
+  color: #ffffff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 1rem;
+  padding: 18px 28px;
+  border: 4px solid #ffffff;
+  outline: 4px solid #c2185b;
+  cursor: pointer;
+  box-shadow: 6px 6px 0px #880e4f;
+  transition: all 0.1s ease;
+  margin-bottom: 25px;
+}
+
+.btn:hover {
+  background-color: #ff1493;
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #880e4f;
+}
+
+.btn:active {
+  transform: translate(4px, 4px);
+  box-shadow: 2px 2px 0px #880e4f;
+}
+
+/* Пиксельная карточка с поздравлением */
+.card {
+  background: #fff0f5;
+  border: 4px solid #ff69b4;
+  box-shadow: 8px 8px 0px #d63384;
+  padding: 25px;
+  max-width: 450px;
+  width: 100%;
+  display: none;
+  animation: popIn 0.3s ease-out forwards;
+  z-index: 10;
+}
+
+.card h2 {
+  font-size: 1.1rem;
+  color: #d63384;
+  margin-bottom: 15px;
+}
+
+.card p {
+  font-size: 0.75rem;
+  line-height: 1.8;
+  color: #4a4a4a;
+}
+
+@keyframes popIn {
+  0% { transform: scale(0.5); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Анимация парящих эмодзи, шариков и сердечек */
+.floating-item {
+  position: fixed;
+  bottom: -50px;
+  font-size: 2rem;
+  user-select: none;
+  pointer-events: none;
+  animation: floatUp 4s linear forwards;
+  z-index: 100;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-105vh) rotate(360deg);
+    opacity: 0;
+  }
+}
